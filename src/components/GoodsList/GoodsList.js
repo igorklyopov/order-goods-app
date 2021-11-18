@@ -11,6 +11,7 @@ import GridContainer from '../GridContainer/GridContainer';
 import GridItem from '../GridItem/GridItem';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
+import UserDataForm from '../UserDataForm/UserDataForm';
 
 export default function GoodsList() {
   const dispatch = useDispatch();
@@ -40,7 +41,11 @@ export default function GoodsList() {
           </GridItem>
         ))}
       </GridContainer>
-      {showModal && <Modal toggleModal={toggleModal} />}
+      {showModal && (
+        <Modal toggleModal={toggleModal}>
+          <UserDataForm />
+        </Modal>
+      )}
     </Container>
   );
 }
