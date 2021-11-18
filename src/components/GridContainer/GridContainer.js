@@ -1,5 +1,5 @@
-import style from './name.module.css';
+// import style from './name.module.css';
 
-export default function name() {
-  return ()
+export default function GridContainer({ children }) {
+  return <ul>{children}</ul>;
 }
