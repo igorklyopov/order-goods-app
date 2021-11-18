@@ -7,7 +7,7 @@ const getGoodsAllData = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const goodsAllData = await goodsAPI.fetchGoodsAll();
-      console.log(goodsAllData);
+
       return goodsAllData;
     } catch (err) {
       return rejectWithValue(err.message);

@@ -5,7 +5,7 @@ import GoodsList from './components/GoodsList/GoodsList';
 function App() {
   return (
     <main>
-      <h1>Hello everyone!</h1>
+      <h1>Order goods</h1>
       <GoodsList />
     </main>
   );
