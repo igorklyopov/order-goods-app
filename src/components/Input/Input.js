@@ -5,7 +5,7 @@ export default function Input({ type, label, showLable, error, ...props }) {
     <div>
       <label>
         {label && (
-          <span className={showLable || 'visuallyHidden'}>{label}</span>
+          <span className={showLable ? '' : 'visuallyHidden'}>{label}</span>
         )}
         <input type={type} {...props} />
       </label>
@@ -13,3 +13,8 @@ export default function Input({ type, label, showLable, error, ...props }) {
     </div>
   );
 }
+
+Input.defaultProps = {
+  type: 'text',
+  error: null,
+};
