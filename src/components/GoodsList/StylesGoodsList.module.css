@@ -1,2 +1,88 @@
 .goodsList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 104px;
+  margin-bottom: 70px;
+  word-break: break-word;
+}
+
+@media screen and (min-width: 768px) {
+  .goodsList {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .goodsList {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.goodsInfoCard {
+  flex-basis: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--primary-light-bg-color);
+  border-radius: 24px;
+}
+
+@media screen and (min-width: 1440px) {
+  .goodsInfoCard {
+    flex-basis: calc((100% - 40px * 3) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .goodsInfoCard {
+    flex-basis: calc((100% - 40px * 2) / 2);
+  }
+}
+
+.goodsInfoCategory {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.goodsInfoTitle {
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: var(--regular-font-weight);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}
+
+.goodsInfoPriceWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goodsInfoPrice {
+  margin-right: 5px;
+  font-size: 60px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.goodsInfoPriceIcon {
+  width: 17px;
+  height: 35px;
+  margin-right: 4px;
+  margin-bottom: 10px;
+  text-shadow: var(--primary-text-shadow);
 }

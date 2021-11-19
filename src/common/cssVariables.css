@@ -5,6 +5,8 @@
   --primary-accent-bg-color: #50daa8;
   --secondary-accent-bg-color: #4bcfa0;
   --primary-dark-text-color: #000000;
+  --primary-accent-text-color: #4bcfa0;
+  --primary-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --primary-light-border-color: rgba(0, 0, 0, 0.1);
   --primary-light-text-color: #ffffff;
   --error-color: #e43f3f;

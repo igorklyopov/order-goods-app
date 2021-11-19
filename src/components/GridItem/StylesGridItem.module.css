@@ -1,8 +1,11 @@
-.gridItem {
-  padding: 5px;
+/* .gridItem {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .gridItem:not(:last-child) {
   margin-right: 5px;
   margin-bottom: 5px;
-}
+} */

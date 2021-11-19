@@ -1,5 +1,4 @@
-import style from './StylesButton.module.css';
-import addClassNames from '../../utils/addClassNames';
+// import style from './StylesButton.module.css';
 
 export default function Button({
   children,
@@ -9,10 +8,10 @@ export default function Button({
   onClick,
   ...props
 }) {
-  const classNames = addClassNames('button', className);
+  const classNames = ['button', className];
   return (
     <button
-      className={classNames}
+      className={classNames.join(' ')}
       type={type}
       disabled={disabled}
       onClick={onClick}

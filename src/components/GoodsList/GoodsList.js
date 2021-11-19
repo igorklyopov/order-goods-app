@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getGoodsAllData } from '../../redux/goods/goodsOperations';
 import { getGoodsAll } from '../../redux/goods/goodsSelectors';
 import style from './StylesGoodsList.module.css';
+import styleBtn from '../Button/StylesGoodsInfoBtnBuy.module.css';
 import Container from '../Container/Container';
 import GridContainer from '../GridContainer/GridContainer';
 import GridItem from '../GridItem/GridItem';
@@ -30,23 +31,32 @@ export default function GoodsList() {
     dispatch(getGoodsAllData());
   }, [dispatch]);
 
+  const goodsListClasses = ['list', style.goodsList];
+
   return (
     <Container>
-      <GridContainer tag="ul" className={style.goodsList}>
+      <GridContainer tag="ul" className={goodsListClasses.join(' ')}>
         {goods.map(({ name, category, price }) => (
-          <GridItem tag="li" key={name}>
-            <h2>{name}</h2>
-            <span>{category}</span>
-            <span>
-              <IconDollar />
-              {price}
-            </span>
-            <Button type="button" onClick={toggleModal}>
-              Buy
-            </Button>
+          <GridItem tag="li" key={name} className={style.goodsInfoCard}>
+            <span className={style.goodsInfoCategory}>{category}</span>
+            <h2 className={style.goodsInfoTitle}>{name}</h2>
+            <div className={style.goodsInfoPriceWrap}>
+              <span className={style.goodsInfoPrice}>
+                <IconDollar className={style.goodsInfoPriceIcon} />
+                {price}
+              </span>
+              <Button
+                type="button"
+                className={styleBtn.goodsInfoBtnBuy}
+                onClick={toggleModal}
+              >
+                Buy
+              </Button>
+            </div>
           </GridItem>
         ))}
       </GridContainer>
+      <Button type="button">Buy cheapest</Button>
       {showModal && (
         <Modal toggleModal={toggleModal}>
           {/* <ButtonCross /> */}

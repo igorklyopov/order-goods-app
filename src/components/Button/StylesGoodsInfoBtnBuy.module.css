@@ -1,0 +1,18 @@
+.goodsInfoBtnBuy {
+  padding: 16px;
+  background-color: var(--primary-light-bg-color);
+  border-radius: 16px;
+  font-weight: var(--medium-font-weight);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--primary-light-border-color);
+
+  color: var(--primary-accent-text-color);
+}
+
+.goodsInfoBtnBuy:hover,
+.goodsInfoBtnBuy:focus {
+  background-color: var(--secondary-accent-bg-color);
+  color: var(--primary-light-text-color);
+}
