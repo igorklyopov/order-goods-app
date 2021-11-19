@@ -1,2 +1,16 @@
 :root {
+  /* colors */
+  --primary-light-bg-color: #ffffff;
+  --secondary-light-bg-color: #e5e5e5;
+  --primary-accent-bg-color: #50daa8;
+  --secondary-accent-bg-color: #4bcfa0;
+  --primary-dark-text-color: #000000;
+  --primary-light-border-color: rgba(0, 0, 0, 0.1);
+  --primary-light-text-color: #ffffff;
+  --error-color: #e43f3f;
+
+  /* typography */
+  --primary-font-family: 'Roboto';
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
 }

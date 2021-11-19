@@ -25,9 +25,7 @@ export default function Modal({ children, toggleModal }) {
 
   return createPortal(
     <div className={style.modalOverlay} onClick={onBackdropClick}>
-      <div className={style.modalContent}>
-        {children} <h1>Modal open!</h1>
-      </div>
+      <div className={style.modalContent}>{children}</div>
     </div>,
     modalRoot
   );

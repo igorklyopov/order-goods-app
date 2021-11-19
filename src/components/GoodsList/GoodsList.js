@@ -12,6 +12,9 @@ import GridItem from '../GridItem/GridItem';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import UserDataForm from '../UserDataForm/UserDataForm';
+import ButtonCross from '../ButtonCross/ButtonCross';
+import { ReactComponent as IconCross } from '../../images/icons/icon-cross.svg';
+import { ReactComponent as IconDollar } from '../../images/icons/icon-dollar.svg';
 
 export default function GoodsList() {
   const dispatch = useDispatch();
@@ -34,7 +37,10 @@ export default function GoodsList() {
           <GridItem tag="li" key={name}>
             <h2>{name}</h2>
             <span>{category}</span>
-            <span>{price}</span>
+            <span>
+              <IconDollar />
+              {price}
+            </span>
             <Button type="button" onClick={toggleModal}>
               Buy
             </Button>
@@ -43,6 +49,15 @@ export default function GoodsList() {
       </GridContainer>
       {showModal && (
         <Modal toggleModal={toggleModal}>
+          {/* <ButtonCross /> */}
+          <Button
+            type="button"
+            onClick={() => {
+              console.log('onCloseModalBtnClick');
+            }}
+          >
+            <IconCross />
+          </Button>
           <UserDataForm />
         </Modal>
       )}
