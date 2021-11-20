@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-import style from './StylesModal.module.css';
+import style from './StylesModalOverlay.module.css';
+import styleModalBtn from '../Button/StylesModalBtnClose.module.css';
+import Button from '../Button/Button';
+import { ReactComponent as IconCross } from '../../images/icons/icon-cross.svg';
 
 const modalRoot = document.getElementById('modal-root');
 
-export default function Modal({ children, toggleModal }) {
+export default function Modal({ children, toggleModal, className, ...props }) {
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -25,7 +28,16 @@ export default function Modal({ children, toggleModal }) {
 
   return createPortal(
     <div className={style.modalOverlay} onClick={onBackdropClick}>
-      <div className={style.modalContent}>{children}</div>
+      <div className={className} {...props}>
+        <Button
+          className={styleModalBtn.modalBtnClose}
+          type="button"
+          onClick={toggleModal}
+        >
+          <IconCross />
+        </Button>
+        {children}
+      </div>
     </div>,
     modalRoot
   );

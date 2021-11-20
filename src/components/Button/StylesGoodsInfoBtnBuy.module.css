@@ -1,4 +1,5 @@
 .goodsInfoBtnBuy {
+  width: 100%;
   padding: 16px;
   background-color: var(--primary-light-bg-color);
   border-radius: 16px;
@@ -15,4 +16,12 @@
 .goodsInfoBtnBuy:focus {
   background-color: var(--secondary-accent-bg-color);
   color: var(--primary-light-text-color);
+  border-color: transparent;
+}
+
+@media screen and (min-width: 1440px) {
+  .goodsInfoBtnBuy {
+    width: auto;
+    max-width: 80px;
+  }
 }

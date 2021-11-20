@@ -1,0 +1,36 @@
+.userDataForm {
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userDataInput {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid var(--primary-light-border-color);
+  border-radius: 16px;
+  outline: none;
+}
+
+.userDataInput:hover,
+.userDataInput:focus,
+.userDataInput:focus-visible {
+  border-color: var(--primary-accent-text-color);
+  outline: 1px solid var(--primary-accent-text-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .userDataForm {
+    max-width: 60%;
+  }
+}
+
+.userName {
+}
+
+.userPhone {
+  /* margin-top: 16px; */
+}

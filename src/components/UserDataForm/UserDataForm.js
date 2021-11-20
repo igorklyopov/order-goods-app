@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import style from './StylesUserDataForm.module.css';
+import styleOrderBtn from '../Button/StylesOrderBtn.module.css';
+import styleBasicBtn from '../Button/StylesBasicBtn.module.css';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import { ReactComponent as IconArrowRight } from '../../images/icons/icon-arrow-right.svg';
 import {
   makeValidation,
   checkEmpty,
@@ -83,13 +86,17 @@ export default function UserDataForm() {
     }
   };
 
+  const inputNameClasses = [style.userDataInput, style.userName];
+  const inputPhoneClasses = [style.userDataInput, style.userPhone];
+  const orderBtnClasses = [styleBasicBtn.basicBtn, styleOrderBtn.orderBtn];
+
   return (
-    <form onSubmit={onUserDataFormSubmit}>
+    <form className={style.userDataForm} onSubmit={onUserDataFormSubmit}>
       <Input
         label="Input name"
         name="userName"
-        //value={userName}
-        // required
+        placeholder="Name"
+        className={inputNameClasses.join(' ')}
         error={userNameValidation?.message}
         onChange={onInputUserDataChange}
         onBlur={onInputUserDataBlur}
@@ -98,13 +105,16 @@ export default function UserDataForm() {
         type="tel"
         label="Input phone number"
         name="userPhone"
-        // required
-        // value={userPhone}
+        placeholder="Number"
+        className={inputPhoneClasses.join(' ')}
         error={userPhoneValidation?.message}
         onChange={onInputUserDataChange}
         onBlur={onInputUserDataBlur}
       />
-      <Button type="submit">Order</Button>
+      <Button type="submit" className={orderBtnClasses.join(' ')}>
+        <span className={styleOrderBtn.orderBtnText}>Order</span>
+        <IconArrowRight className={styleOrderBtn.iconArrowRight} />
+      </Button>
     </form>
   );
 }

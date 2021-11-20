@@ -1,0 +1,23 @@
+.orderBtn {
+  width: 100%;
+}
+
+.orderBtnText {
+  margin-right: 8px;
+  font-weight: var(--medium-font-weight);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.iconArrowRight {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.orderBtn:hover .iconArrowRight,
+.orderBtn:focus .iconArrowRight {
+  opacity: 1;
+}

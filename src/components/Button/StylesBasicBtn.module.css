@@ -1,0 +1,25 @@
+.basicBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--secondary-accent-bg-color);
+  border-radius: 16px;
+  color: var(--primary-light-text-color);
+}
+
+.basicBtnText {
+  margin-right: 8px;
+}
+
+.basicBtn:hover,
+.basicBtn:focus {
+  background-color: var(--primary-accent-bg-color);
+}

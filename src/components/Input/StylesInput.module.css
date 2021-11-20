@@ -1,0 +1,47 @@
+.inputErrorText {
+  display: block;
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: var(--error-color);
+}
+
+.inputWrap {
+  position: relative;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.inputLabelText {
+  display: block;
+  padding: 10px;
+}
+
+.btnClear {
+  position: absolute;
+  top: 25%;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: var(--primary-light-text-color);
+  background-color: var(--secondary-light-bg-color);
+  border-radius: 50%;
+}
+
+.btnClear svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btnClear.errorBtn {
+  background-color: var(--error-color);
+}

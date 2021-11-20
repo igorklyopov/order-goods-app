@@ -1,0 +1,14 @@
+.modalBtnClose {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-light-bg-color);
+  border-radius: 50%;
+}
+
+.modalBtnClose svg {
+  width: 20px;
+  height: 20px;
+}
