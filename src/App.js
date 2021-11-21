@@ -1,4 +1,3 @@
-// import 'modern-normalize/modern-normalize.css';
 import './common/cssVariables.css';
 import './common/globalStyles.css';
 import GoodsList from './components/GoodsList/GoodsList';

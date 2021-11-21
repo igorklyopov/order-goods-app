@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
 import style from './StylesUserDataForm.module.css';
 import styleOrderBtn from '../Button/StylesOrderBtn.module.css';
 import styleBasicBtn from '../Button/StylesBasicBtn.module.css';
@@ -15,9 +16,16 @@ import {
 
 export default function UserDataForm() {
   const [userName, setUserName] = useState('');
-  const [userPhone, setUserPhone] = useState(0);
+  const [userPhone, setUserPhone] = useState('');
   const [userNameValidation, setUserNameValidation] = useState(null);
   const [userPhoneValidation, setUserPhoneValidation] = useState(null);
+  const [showBtnClearName, setShowBtnClearName] = useState(false);
+  const [showBtnClearPhone, setShowBtnClearPhone] = useState(false);
+
+  useEffect(() => {
+    userName === '' ? setShowBtnClearName(false) : setShowBtnClearName(true);
+    userPhone === '' ? setShowBtnClearPhone(false) : setShowBtnClearPhone(true);
+  }, [userName, userPhone]);
 
   const validationUserNameOpts = {
     checkEmpty,
@@ -51,6 +59,9 @@ export default function UserDataForm() {
       userName: data.get('userName'),
       userPhone: Number(data.get('userPhone')),
     };
+
+    setUserName('');
+    setUserPhone('');
     console.log(userData);
   };
 
@@ -96,6 +107,9 @@ export default function UserDataForm() {
         label="Input name"
         name="userName"
         placeholder="Name"
+        value={userName}
+        setValue={setUserName}
+        showBtnClear={showBtnClearName}
         className={inputNameClasses.join(' ')}
         error={userNameValidation?.message}
         onChange={onInputUserDataChange}
@@ -106,11 +120,15 @@ export default function UserDataForm() {
         label="Input phone number"
         name="userPhone"
         placeholder="Number"
+        value={userPhone}
+        setValue={setUserPhone}
+        showBtnClear={showBtnClearPhone}
         className={inputPhoneClasses.join(' ')}
         error={userPhoneValidation?.message}
         onChange={onInputUserDataChange}
         onBlur={onInputUserDataBlur}
       />
+
       <Button type="submit" className={orderBtnClasses.join(' ')}>
         <span className={styleOrderBtn.orderBtnText}>Order</span>
         <IconArrowRight className={styleOrderBtn.iconArrowRight} />

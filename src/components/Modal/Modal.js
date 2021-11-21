@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import PropTypes from 'prop-types';
 
 import style from './StylesModalOverlay.module.css';
 import styleModalBtn from '../Button/StylesModalBtnClose.module.css';
@@ -46,4 +47,9 @@ export default function Modal({ children, toggleModal, className, ...props }) {
 Modal.defaultProps = {
   children: null,
   toggleModal: () => {},
+};
+
+Modal.propTypes = {
+  children: PropTypes.node,
+  toggleModal: PropTypes.func,
 };

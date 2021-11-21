@@ -1,4 +1,4 @@
-// import style from './StylesButton.module.css';
+import PropTypes from 'prop-types';
 
 export default function Button({
   children,
@@ -27,4 +27,11 @@ Button.defaultProps = {
   type: 'button',
   disabled: false,
   onClick: () => {},
+};
+
+Button.propTypes = {
+  children: PropTypes.node,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };

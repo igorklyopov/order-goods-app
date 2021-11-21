@@ -1,0 +1,23 @@
+.btnClear {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: var(--primary-light-text-color);
+  background-color: var(--secondary-light-bg-color);
+  border-radius: 50%;
+}
+
+.btnClear svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btnClear.errorBtn {
+  background-color: var(--error-color);
+}

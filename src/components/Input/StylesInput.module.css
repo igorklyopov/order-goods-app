@@ -10,38 +10,13 @@
 
 .inputWrap {
   position: relative;
+  margin-bottom: 16px;
 }
 
 .inputLabel {
-  display: block;
-  margin-bottom: 16px;
 }
 
 .inputLabelText {
   display: block;
   padding: 10px;
-}
-
-.btnClear {
-  position: absolute;
-  top: 25%;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  color: var(--primary-light-text-color);
-  background-color: var(--secondary-light-bg-color);
-  border-radius: 50%;
-}
-
-.btnClear svg {
-  width: 20px;
-  height: 20px;
-}
-
-.btnClear.errorBtn {
-  background-color: var(--error-color);
 }
