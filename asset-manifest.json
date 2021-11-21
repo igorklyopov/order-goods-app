@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/order-goods-app/static/css/main.e6b69743.chunk.css",
+    "main.js": "/order-goods-app/static/js/main.4dbc5f84.chunk.js",
+    "main.js.map": "/order-goods-app/static/js/main.4dbc5f84.chunk.js.map",
+    "runtime-main.js": "/order-goods-app/static/js/runtime-main.92ed24e8.js",
+    "runtime-main.js.map": "/order-goods-app/static/js/runtime-main.92ed24e8.js.map",
+    "static/js/2.f392a1bc.chunk.js": "/order-goods-app/static/js/2.f392a1bc.chunk.js",
+    "static/js/2.f392a1bc.chunk.js.map": "/order-goods-app/static/js/2.f392a1bc.chunk.js.map",
+    "index.html": "/order-goods-app/index.html",
+    "static/css/main.e6b69743.chunk.css.map": "/order-goods-app/static/css/main.e6b69743.chunk.css.map",
+    "static/js/2.f392a1bc.chunk.js.LICENSE.txt": "/order-goods-app/static/js/2.f392a1bc.chunk.js.LICENSE.txt",
+    "static/media/icon-arrow-right.ba14ff7e.svg": "/order-goods-app/static/media/icon-arrow-right.ba14ff7e.svg",
+    "static/media/icon-cross.caeb592b.svg": "/order-goods-app/static/media/icon-cross.caeb592b.svg",
+    "static/media/icon-dollar.871568f6.svg": "/order-goods-app/static/media/icon-dollar.871568f6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92ed24e8.js",
+    "static/js/2.f392a1bc.chunk.js",
+    "static/css/main.e6b69743.chunk.css",
+    "static/js/main.4dbc5f84.chunk.js"
+  ]
+}
